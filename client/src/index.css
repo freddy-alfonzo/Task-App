@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #202020;
+  color: #fff;
+}
+div:where(.swal2-container) div:where(.swal2-popup) {
+  border: 1px solid gray;
+  border-radius: 2rem;
+  background: #333;
+  color: white;
+}
