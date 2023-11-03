@@ -17,7 +17,6 @@ const TaskFormPage = () => {
   const onSubmit = handleSubmit((data) => {
     if (data.title === "") return Swal.fire("Error", "Title is required", "error")
     if (data.description === "") return Swal.fire("Error", "Description is required", "error")
-    console.log("no deberia salir")
     const dataValid = {
       ...data,
       date: data.date ? dayjs.utc(data.date).format() : dayjs.utc().format(),
@@ -53,7 +52,6 @@ const TaskFormPage = () => {
           <label htmlFor="title">Title</label>
           <input
             type="text"
-            autocomplete="off"
             placeholder="Title"
             autoFocus
             {...register("title")}
