@@ -11,7 +11,7 @@ export const useAuth = () => {
   return context;
 };
 
-export const AuthProvider = ({ children }) => {
+export function AuthProvider ({ children }) {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAunthenticated] = useState(false);
   const [errors, setErrors] = useState([]);
@@ -105,4 +105,3 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export default AuthContext;
