@@ -3,10 +3,10 @@ import { createContext, useContext, useState } from "react";
 import { registerRequest, loginRequest, verifyTokenRequest } from "../api/auth";
 import Cookies from "js-cookie";
 
-const AuthContext = createContext();
+const AuthContextt = createContext();
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
+  const context = useContext(AuthContextt);
   if (!context) throw new Error("useAuth must be used within a AuthProvider");
   return context;
 };
@@ -89,7 +89,7 @@ export function AuthProvider ({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider
+    <AuthContextt.Provider
       value={{
         user,
         signup,
@@ -101,7 +101,7 @@ export function AuthProvider ({ children }) {
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </AuthContextt.Provider>
   );
 };
 
