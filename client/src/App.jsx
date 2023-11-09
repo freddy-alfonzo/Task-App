@@ -23,7 +23,7 @@ const App = () => {
               <Route path="/" element={<RedirectPage />}></Route>
               <Route path="/login" element={<LoginPage />}></Route>
               <Route path="/register" element={<RegisterPage />}></Route>
-              <Route path="*" element={<h1 className="text-3xl text-center my-10">This page does not exist</h1>}></Route>
+              <Route path="*" element={<h1 className="text-3xl text-center my-10">This page does not exist!</h1>}></Route>
 
 
               <Route element={<ProtectedRoute />}>
