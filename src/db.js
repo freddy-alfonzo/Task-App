@@ -4,7 +4,7 @@ export const connectDB = async () => {
   try {
     console.log("Connecting to the database...");
     await mongoose.connect(
-      "mongodb+srv://freddyalfonzo01:josuealfonzo123@cluster0.5s4wcy2.mongodb.net/merndb?retryWrites=true&w=majority",
+      "mongodb://127.0.0.1:27017/merndb",
       {
         useNewUrlParser: true,   // Opcional, pero recomendado para evitar advertencias.
         useUnifiedTopology: true,  // Opcional, pero recomendado para evitar advertencias.
